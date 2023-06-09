@@ -1,0 +1,28 @@
+<section class="features">
+  <div class="max-w"> 
+    <div class="c">
+      <h1>
+        <hr />
+        <div>{{ data.headline }}</div>
+      </h1>
+      <p class="sub">{{ data.sub_headline }}</p>
+    </div>
+    <div class="feature-items"> 
+      {% for item in data.feature_items %}
+      <div>
+        <div>
+          <div><img src="{{ item.icon }}" /> </div>
+          <h3> {{ item.title }} </h3>
+          <div>{{ item.sub_title }}</div>
+        </div>
+        <div> 
+          <a class="action" href="{{ item.button_link }}">
+            Read More
+            <svg xmlns="http://www.w3.org/2000/svg" class="fill-emphasis" height="20" viewbox="0 96 960 960" width="20"><path d="m561 814-43-42 168-168H160v-60h526L517 375l43-42 241 241-240 240Z"></path></svg>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
