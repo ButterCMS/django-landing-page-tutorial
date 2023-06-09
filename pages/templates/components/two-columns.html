@@ -1,0 +1,14 @@
+{% for column in data %}
+<section class="two-column" position="{{ column.image_position }}"> 
+  <div class="max-w">
+    <div class="image">
+      <img src="{{ column.image }}" al="{{ column.image_alt }}">
+    </div>
+    <div class="text">
+      <span class="tag"> {{ column.tag }} </span>
+      <h1> {{ column.headline }} </h1>
+      <p> {{ column.sub_headline }}</p>
+    </div>
+  </div>
+</section>
+{% endfor %}
